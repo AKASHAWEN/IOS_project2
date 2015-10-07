@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XTU-WG-kYQ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,6 +20,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uky-n4-DzD">
                                 <rect key="frame" x="200" y="100" width="200" height="100"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uky-n4-DzD" secondAttribute="height" multiplier="2:1" id="siQ-O0-sAh"/>
+                                </constraints>
                                 <state key="normal" image="estonia"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ebm-Fh-yg1"/>
@@ -44,10 +48,15 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="SXO-be-VI9" secondAttribute="bottom" constant="20" id="6cN-ea-Jou"/>
+                            <constraint firstItem="CJM-wS-dZ9" firstAttribute="width" secondItem="uky-n4-DzD" secondAttribute="width" id="97s-0U-Rc1"/>
                             <constraint firstItem="CJM-wS-dZ9" firstAttribute="centerX" secondItem="uky-n4-DzD" secondAttribute="centerX" id="LiZ-IV-l9J"/>
+                            <constraint firstItem="SXO-be-VI9" firstAttribute="width" secondItem="CJM-wS-dZ9" secondAttribute="width" id="NSk-wE-LeN"/>
                             <constraint firstItem="uky-n4-DzD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="36" id="VTu-Js-4e9"/>
+                            <constraint firstItem="CJM-wS-dZ9" firstAttribute="height" secondItem="uky-n4-DzD" secondAttribute="height" id="c75-eJ-20O"/>
                             <constraint firstItem="SXO-be-VI9" firstAttribute="top" secondItem="CJM-wS-dZ9" secondAttribute="bottom" constant="30" id="dBy-2B-irw"/>
                             <constraint firstItem="CJM-wS-dZ9" firstAttribute="top" secondItem="uky-n4-DzD" secondAttribute="bottom" constant="30" id="iHK-pR-shp"/>
+                            <constraint firstItem="SXO-be-VI9" firstAttribute="height" secondItem="CJM-wS-dZ9" secondAttribute="height" id="k5N-sS-rpO"/>
                             <constraint firstItem="uky-n4-DzD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sHb-zv-T9u"/>
                             <constraint firstItem="SXO-be-VI9" firstAttribute="centerX" secondItem="CJM-wS-dZ9" secondAttribute="centerX" id="u1C-jo-aA5"/>
                         </constraints>
@@ -61,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1137" y="400"/>
+            <point key="canvasLocation" x="1104" y="838"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rRx-T6-yXH">
